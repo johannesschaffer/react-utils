@@ -1,0 +1,34 @@
+{
+  "name": "@johannesschaffer/react-utils",
+  "description": "Utils for React",
+  "author": "Johannes Schaffer",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johannesschaffer/lexical-utils"
+  },
+  "version": "1.0.0",
+  "exports": {
+    "./type": "./dist/types/index.js",
+    "./nodes": "./dist/nodes/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "compile": "tsc --build",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.7",
+    "@types/react": "^18.0.34",
+    "rimraf": "^4.4.1",
+    "typescript": "latest"
+  }
+}
