@@ -1,9 +1,8 @@
-import {ComponentPropsWithoutRef, ElementType, FC} from "react";
+import {ComponentPropsWithoutRef, ElementType, FC, FunctionComponentElement} from "react";
 
-// Component Props
 export type CP<T extends ElementType> = ComponentPropsWithoutRef<T>
-// React Component
 export type RC<T extends ElementType = 'div'> = FC<ComponentPropsWithoutRef<T>>
+export type FCE<T> = FunctionComponentElement<T>
 
 export interface RSCProps {
     params: {

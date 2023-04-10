@@ -9,8 +9,8 @@
   },
   "version": "1.0.0",
   "exports": {
-    "./type": "./dist/types/index.js",
-    "./nodes": "./dist/nodes/index.js"
+    "./types": "./dist/types/index.js",
+    "./utils": "./dist/utils/index.js"
   },
   "files": [
     "dist"
