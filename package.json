@@ -5,7 +5,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johannesschaffer/lexical-utils"
+    "url": ""
   },
   "version": "1.0.0",
   "exports": {
@@ -21,6 +21,8 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
+    "framer-motion": "^10.11.2",
+    "tailwind-styled-components": "^2.2.0"
   },
   "peerDependencies": {
     "react": "^18.2.0"
