@@ -7,20 +7,27 @@ import {FCE} from "../types";
 export const addPropToElems = (root: FCE<{children: ReactNode}>, type: string, prop: string, value: (elem: JSX.Element) => any) => {
     const matchedElems: JSX.Element[] = []
     
+    const handleChild = (child: any) => {
+        if (child.type == type) {
+            const cloned = cloneElement(child, {[prop]: value(child)})
+            matchedElems.push(cloned)
+            return cloned
+        }
+        return addProp(child)
+    }
+    const handleChildren = (elem: FCE<{children: ReactNode}>) => {
+        if (Array.isArray(elem.props.children)) return elem.props.children.map(handleChild)
+        if (typeof elem.props.children === 'object') return handleChild(elem.props.children)
+        // TODO: Handle types of children
+        return handleChild(elem.props.children)
+    }
     const addProp = (elem: FCE<{children: ReactNode}>): FCE<{children: ReactNode}> => {
-        if (!(elem.props?.children instanceof Array)) return elem
+        if (!(elem.props?.children)) return elem
         return {
             ...elem,
             props: {
                 ...elem.props,
-                children: elem.props.children.map(child => {
-                    if (child.type == type) {
-                        const cloned = cloneElement(child, {[prop]: value(child)})
-                        matchedElems.push(cloned)
-                        return cloned
-                    }
-                    return addProp(child)
-                })
+                children: handleChildren(elem)
             }
         }
     }
