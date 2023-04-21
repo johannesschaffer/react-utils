@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/johannesschaffer/react-utils"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "exports": {
     "./types": "./dist/types/index.js",
     "./utils": "./dist/utils/index.js"
