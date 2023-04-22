@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.0.0
+- feat!: remove addPropToElems()
+- fix: getTextOfElem() - didn't work in a lot of cases
+
 ## v1.0.1
 - fix: addPropToElem() didn't work with parent having only one child
 - build: add dev script
