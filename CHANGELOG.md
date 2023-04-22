@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.1
+- fix: export ui path
+
 ## v2.0.0
 - feat!: remove addPropToElems()
 - fix: getTextOfElem() - didn't work in a lot of cases
