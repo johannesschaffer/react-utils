@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.1.0
+- feat: add useNumberInput() & useStringInput()
+
 ## v2.0.1
 - fix: export ui path
 
