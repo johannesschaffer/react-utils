@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.1.2
+- fix: don't show initially 0 with useNumberInput()
+
 ## v2.1.0
 - feat: add useNumberInput() & useStringInput()
 
